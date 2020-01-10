@@ -11,6 +11,9 @@ public class User {
     private String username;
     private String Email;
     private String Password;
+    private String Address;
+    private String City;
+    private String State;
     @OneToMany
     private List<Order> CustomerOrders;
     @OneToMany(fetch = FetchType.LAZY)
@@ -49,6 +52,18 @@ public class User {
     public void setPassword(String password) {
         Password = password;
     }
+
+    public String getAddress() { return Address; }
+
+    public void setAddress(String address) { Address = address; }
+
+    public String getCity() { return City; }
+
+    public void setCity(String city) { City = city; }
+
+    public String getState() { return State; }
+
+    public void setState(String state) { State = state; }
 
     public List<Order> getCustomerOrders() {
         return CustomerOrders;
